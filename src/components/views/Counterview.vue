@@ -1,8 +1,10 @@
 <script setup>
+import { useCounterStore} from "@/store/CounterStore"
+let Counter = useCounterStore();
 </script>
 
 <template>
-    <p>
-        counter view
-    </p>
+    
+<h2>{{ counter }}</h2>
+    <button @click="counter.count++">Increment</button>
 </template>
